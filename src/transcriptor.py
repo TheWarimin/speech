@@ -12,7 +12,7 @@ def reproducir_sonido(wav_path):
 
 def detectar_palabras_clave():
     # Cargar el modelo de Vosk
-    model = Model("c:/Users/ivost/OneDrive/Escritorio/speech/vosk-model-small-es-0.42")  # Cambia a la ruta donde descargaste el modelo
+    model = Model("c:/Users/ivost/OneDrive/Escritorio/speech-main/vosk-model-small-es-0.42")  # Cambia a la ruta donde descargaste el modelo
     recognizer = KaldiRecognizer(model, 16000)
 
     # Inicializar PyAudio para capturar audio en tiempo real
@@ -41,7 +41,7 @@ def detectar_palabras_clave():
                     # Verificar si se detecta la palabra clave "pico"
                     if "pico" in text.lower():
                         print("¡Palabra clave 'pico' detectada! Reproduciendo sonido...")
-                        reproducir_sonido("c:/Users/ivost/OneDrive/Escritorio/speech/yaaina.wav")  # Ruta al archivo de sonido
+                        reproducir_sonido("c:/Users/ivost/OneDrive/Escritorio/speech-main/yaaina.wav")  # Ruta al archivo de sonido
                         
                     # Verificar si el usuario quiere detener el programa
                     if "detener" in text.lower():
